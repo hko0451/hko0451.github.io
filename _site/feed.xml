@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-25T00:08:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Site Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-25T00:58:18+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hyeonjong’s Blog</title><subtitle>Interested in Linux Kernel and related.</subtitle><author><name>Hyeonjong Ko</name></author><entry><title type="html">Hello World 부트로더</title><link href="http://localhost:4000/kernel/hello-world-bootloader/" rel="alternate" type="text/html" title="Hello World 부트로더" /><published>2022-08-24T00:00:00+09:00</published><updated>2022-08-24T00:00:00+09:00</updated><id>http://localhost:4000/kernel/hello-world-bootloader</id><content type="html" xml:base="http://localhost:4000/kernel/hello-world-bootloader/"><![CDATA[<h1 id="a를-출력하는-부트로더">‘A’를 출력하는 부트로더</h1>
+
+<pre><code class="language-assembly">ORG 0x7c00
+BITS 16
+
+start:
+	mov ah, 0eh
+	mov al, 'A'
+	mov bx, 0
+	int 0x10
+
+	jmp $
+
+times 510-($ - $$) db 0
+dw 0xAA55
+</code></pre>]]></content><author><name>Hyeonjong Ko</name></author><category term="kernel" /><category term="kernel" /><summary type="html"><![CDATA[Hello World를 출력하는 인텔 CPU 부트로더]]></summary></entry></feed>
